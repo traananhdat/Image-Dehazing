@@ -165,7 +165,8 @@ class DatasetLMDB(data.Dataset):
 
 
 ITS_train_loader_lmdb = DataLoader(
-    dataset=DatasetLMDB(os.path.join(path, 'ITS/ITS.lmdb'), size=crop_size), batch_size=BS,
+    # dataset=DatasetLMDB(os.path.join(path, 'ITS/ITS.lmdb'), size=crop_size), batch_size=BS,
+    dataset=DatasetLMDB("/kaggle/input/c2pnet/C2PNet/data/ITS/ITS.lmdb", size=crop_size), batch_size=BS,
     shuffle=True, pin_memory=True)
 ITS_test_loader = DataLoader(dataset=RESIDE_Dataset(os.path.join(path, 'SOTS/indoor'), train=False, size='whole img'),
                              batch_size=1, shuffle=False)
