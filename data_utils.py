@@ -31,6 +31,7 @@ class RESIDE_Dataset(data.Dataset):
         print('crop size', size)
         self.train = train
         self.format = format
+        path = '/kaggle/input/c2pnet/C2PNet/data/SOTS' + path.split('data')[-1]
         self.haze_imgs_dir = os.listdir(os.path.join(path, 'hazy'))
         self.haze_imgs = [os.path.join(path, 'hazy', img) for img in self.haze_imgs_dir]
         self.clear_dir = os.path.join(path, 'clear')
