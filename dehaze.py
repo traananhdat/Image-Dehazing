@@ -29,13 +29,13 @@ if opt.save:
         os.mkdir(output_dir)
 
 if dataset == 'indoor':
-    haze_dir = 'data/SOTS/indoor/hazy/'
-    clear_dir = 'data/SOTS/indoor/clear/'
-    model_dir = 'trained_models/ITS.pkl'
+    haze_dir = '/kaggle/input/c2pnet/C2PNet/data/SOTS/SOTS/indoor/hazy/'
+    clear_dir = '/kaggle/input/c2pnet/C2PNet/data/SOTS/SOTS/indoor/clear/'
+    model_dir = '/kaggle/input/c2pnet/C2PNet/trained_models/ITS.pkl'
 elif dataset == 'outdoor':
-    haze_dir = 'data/SOTS/outdoor/hazy/'
-    clear_dir = 'data/SOTS/outdoor/clear/'
-    model_dir = 'trained_models/OTS.pkl'
+    haze_dir = '/kaggle/input/c2pnet/C2PNet/data/SOTS/SOTS/outdoor/hazy/'
+    clear_dir = '/kaggle/input/c2pnet/C2PNet/data/SOTS/SOTS/outdoor/clear/'
+    model_dir = '/kaggle/input/c2pnet/C2PNet/trained_models/OTS.pkl'
 
 device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
 
